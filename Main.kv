@@ -1,0 +1,53 @@
+MDScreen:
+    name: "main"
+    MDFloatLayout:
+        FitImage:
+            source: "down.jpg"
+        AsyncImage:
+            source: "Bot.gif"
+            size_hint: 1.5, 2
+            pos_hint: {"center_x": .5, "center_y": .8}
+            anim_delay: 0.05
+        MDLabel:
+            text: "FRIDAY AI"
+            font_name: "Poppins-SemiBold.ttf"
+            font_size: "35sp"
+            pos_hint: {"center_x": .5, "center_y": .58}
+            halign: "center"
+            theme_text_color: "Custom"
+            text_color: 1, 1, 1, 1
+        MDLabel:
+            text: "your digital assistant to guide you through our contents and services 24X7"
+            size_hint_x: .9
+            font_name: "Poppins-Regular.ttf"
+            font_size: "18sp"
+            pos_hint: {"center_x": .5, "center_y": .45}
+            halign: "center"
+            theme_text_color: "Custom"
+            text_color: 1, 1, 1, 0.5
+        MDLabel:
+            text: "Read me first"
+            font_name: "Poppins-Regular.ttf"
+            font_size: "18sp"
+            pos_hint: {"center_x": .5, "center_y": .33}
+            halign: "center"
+            underline: "True"
+            theme_text_color: "Custom"
+            text_color: 1, 1, 1, 1
+
+
+        Button:
+            text: ""
+            size_hint: .45, .08
+            pos_hint: {"center_x": .5, "center_y": .1}
+            background_color: 1, 1, 1, 0
+            on_release:
+                root.manager.transition.direction = "left"
+                root.manager.current = "chats"
+        MDLabel:
+            text: "GET STARTED"
+            halign: "center"
+            pos_hint: {"center_y": .1}
+            font_name: "Poppins-SemiBold.ttf"
+            font_size: "18sp"
+            color: 0, 1, 1, 1

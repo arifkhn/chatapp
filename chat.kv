@@ -1,0 +1,45 @@
+MDScreen:
+    name: "bot"
+
+    MDFloatLayout:
+        FitImage:
+            source: "wall.jpg"
+        AsyncImage:
+            source: "iron.gif"
+            size_hint: 1.5, 2
+            pos_hint: {"center_x": .54, "center_y": .8}
+            anim_delay: 0.05
+        MDLabel:
+            text:"F.R.I.D.A.Y AI"
+            font_name: "Poppins-SemiBold.ttf"
+            font_size: "23sp"
+            pos_hint: {"center_x": .475, "center_y": .49}
+            halign: "center"
+            theme_text_color: "Custom"
+            text_color: 1, 1, 1, 1
+
+        MDLabel:
+            text: "TEMP: 25°C\nHUMIDITY: 25%\nPRESSURE: 2"
+            font_name: "Poppins-Regular.ttf"
+            font_size: "18sp"
+            pos_hint: {"center_x": .5, "center_y": .36}
+            halign: "center"
+            theme_text_color: "Custom"
+            text_color: 0, 1, 1, 1
+
+
+        Button:
+            text: ""
+            size_hint: .45, .08
+            pos_hint: {"center_x": .5, "center_y": .06}
+            background_color: 0, 0, 0, 0
+            on_release:
+                root.manager.transition.direction = "right"
+                root.manager.current = "chats"
+        MDLabel:
+            text: "EXIT TALK"
+            halign: "center"
+            pos_hint: {"center_y": .075}
+            font_name: "Poppins-SemiBold.ttf"
+            font_size: "20sp"
+            color: 0, 1, 1, 1

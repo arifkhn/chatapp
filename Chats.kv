@@ -1,0 +1,113 @@
+MDScreen:
+    name: "chats"
+
+    MDFloatLayout:
+        FitImage:
+            source: "down.jpg"
+        AsyncImage:
+            source: "mic.png"
+            size_hint: 1.5, 2
+            pos_hint: {"center_x": .5, "center_y": .84}
+            anim_delay: 0.05
+            color: 0, 0, 0.3, 0.7
+        MDLabel:
+            text:"FRIDAY AI"
+            font_name: "Poppins-Regular.ttf"
+            font_size: "35sp"
+            pos_hint: {"center_x": .5, "center_y": .64}
+            halign: "center"
+            theme_text_color: "Custom"
+            text_color: 1, 1, 1, 1
+
+        MDLabel:
+            text: "you can have a long conersetion with this ai assistant and ask your daily problems and can expect an optimal solution"
+            size_hint_x: .9
+            font_name: "Poppins-Regular.ttf"
+            font_size: "18sp"
+            pos_hint: {"center_x": .5, "center_y": .48}
+            halign: "center"
+            theme_text_color: "Custom"
+            text_color: 1, 1, 1, 0.7
+
+
+        ScrollView:
+            do_scroll_x: True
+            do_scroll_y: False
+
+            MDBoxLayout:
+                orientation: 'horizontal'
+                adaptive_width: True
+                padding: dp(4)
+                spacing: dp(4)
+
+                BoxLayout:
+                    orintation: 'vertical'
+                    size_hint_x: None
+                    width: dp(120)
+                    spacing: dp(4)
+
+                    MDIconButton:
+                        icon: "home"
+                        icon_size: "34sp"
+                        pos_hint: {"center_x": .5, "center_y": .08}
+                        theme_text_color: "Custom"
+                        text_color: 1, 1, 1, 1
+                        on_release:
+                            root.manager.transition.direction = "right"
+                            root.manager.current = "main"
+
+                    MDIconButton:
+                        icon: "account"
+                        icon_size: "34sp"
+                        pos_hint: {"center_x": .5, "center_y": .08}
+                        theme_text_color: "Custom"
+                        text_color: 1, 1, 1, 1
+                        on_release:
+                            root.manager.transition.direction = "right"
+                            root.manager.current = "main"
+
+                    MDIconButton:
+                        icon: "microphone"
+                        icon_size: "34sp"
+                        pos_hint: {"center_x": .5, "center_y": .08}
+                        theme_text_color: "Custom"
+                        text_color: 1, 1, 1, 1
+                        on_release:
+                            root.manager.transition.direction = "left"
+                            root.manager.current = "bot"
+
+                    MDIconButton:
+                        icon: "phone"
+                        icon_size: "34sp"
+                        pos_hint: {"center_x": .5, "center_y": .08}
+                        theme_text_color: "Custom"
+                        text_color: 1, 1, 1, 1
+                        on_release:
+                            root.manager.transition.direction = "right"
+                            root.manager.current = "main"
+
+                    MDIconButton:
+                        icon: "history"
+                        icon_size: "34sp"
+                        pos_hint: {"center_x": .5, "center_y": .08}
+                        theme_text_color: "Custom"
+                        text_color: 1, 1, 1, 1
+                        on_release:
+                            root.manager.transition.direction = "right"
+                            root.manager.current = "main"
+
+        Button:
+            text: ""
+            size_hint: .45, .08
+            pos_hint: {"center_x": .5, "center_y": .26}
+            background_color: 1, 1, 1, 0
+            on_release:
+                root.manager.transition.direction = "right"
+                root.manager.current = "main"
+        MDLabel:
+            text: "LOGOUT"
+            halign: "center"
+            pos_hint: {"center_y": .26}
+            font_name: "Poppins-SemiBold.ttf"
+            font_size: "18sp"
+            color: 0, 1, 1, 1
